@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: 'f88890be-5ba8-40df-a995-4a4beab56927'
   imageRepository: 'flaskapipythonapp'
   containerRegistry: 'ankuracr1.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '$(Pipeline.Workspace)/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'ankuracr1123416d6-auth'
 
