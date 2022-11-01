@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: flaskapipythonapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapipythonapp
+  template:
+    metadata:
+      labels:
+        app: flaskapipythonapp 
+    spec:
+      containers:
+        - name: flaskapipythonapp 
+          image: ankuracr1.azurecr.io/flaskapipythonapp
+          ports:
+          - containerPort: 80
